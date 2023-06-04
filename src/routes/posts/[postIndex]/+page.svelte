@@ -1,4 +1,7 @@
 <script>
+    import { page } from "$app/stores";
+    const postId = $page.params.postId
+    console.log(postId)
     export let data
 </script>
 <h1>Wagwan</h1>

@@ -1,9 +1,10 @@
 <script>
     import { page } from "$app/stores";
-    const postId = $page.params.postId
-    console.log(postId)
-    export let data
+    import {allPosts} from "../../../stores/posts";
+    const postId = $page.params.postIndex;
+    
+    console.log($allPosts[postId]);
+    const currentPost = $allPosts[postId]
 </script>
-<h1>Wagwan</h1>
-{data.posts}
-<!-- {post.content.rendered} -->
+<h1>{currentPost.name}</h1>
+{@html currentPost.content}

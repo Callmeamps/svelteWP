@@ -11,6 +11,7 @@ const fetchPosts = async () => {
             id: posts.id,
             name: posts.title.rendered,
             description: posts.excerpt.rendered,
+            content: posts.content.rendered,
             image: posts.jetpack_featured_media_url,
             previewImage: posts.uagb_featured_image_src.medium_large[0],
             meta: {

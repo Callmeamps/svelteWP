@@ -1,22 +1,4 @@
-<script context="module">
-    export const load = async ({fetch}) => {
-        const res = await fetch("https://blog.callmeamps.one/wp-json/wp/posts");
-        const posts =  await res.json;
-        return {
-            props: {
-                posts,
-            },
-        };
-    };
-</script>
-
-<script>
-    export let posts
-</script>
-<h1>Blog</h1>
-{#each posts as post}
-<div>
-    <h1>{post.title.rendered}</h1>
-    <p>{post.excerpt.rendered}</p>
+<div class="mx-auto max-w-2xl lg:mx-0">
+    <h1 class="text-4xl text-center m-8">Home</h1>
+    <p class="mt-2 text-lg leading-8 text-gray-600">Learn how to grow your business with our expert advice.</p>
 </div>
-{/each}
